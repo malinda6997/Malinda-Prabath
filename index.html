@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Malinda-Prabath</title>
+
+    <style>
+        @keyframes gradient-text {
+            0% {
+                background-position: 0% 50%;
+            }
+    
+            50% {
+                background-position: 100% 50%;
+            }
+    
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        .animated-gradient {
+            background: linear-gradient(90deg, #f98dde, #86bafa, #9d48f7);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-text 4s ease infinite;
+        }
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -47,12 +71,30 @@
                 <li><a onclick="closeMenu()" href="#services">Services</a></li>
                 <li><a onclick="closeMenu()" href="#projects">Projects</a></li>
                 <li><a onclick="closeMenu()" href="#contact">Contact me</a></li>
-            </ul>
-         
-
-        
+            </ul>       
     </nav>
         <!-- Navigation bar close here -->
+
+        <!-- header section start here -->
+         <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+            <img class="rounded-full w-32" src="./images/profile-img.png" >
+            <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">Hi! I'm Malinda Prabath <img class="w-6" src="./images/hand-icon.png" alt=""></h3>
+            <h1 class="text-3xl sm:text-6xl lg:text-[66px] animated-gradient mb-8">
+                Freelancer UI UX Designer </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum fugit beatae, dolorum aliquid veritatis cumque deserunt. 
+                Adipisci pariatur ratione sit iusto.</p>
+
+         </div>
+        <!-- header section close here -->
+
+
+
+
+
+
+
+
 
 
 <script src="./script.js"></script>
