@@ -8,7 +8,13 @@
     <title>Malinda-Prabath</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+        <img class="w-full " src="./images/header-bg-color.png" alt="">
+    </div>
+
+    <!-- Navigation bar starts here -->
 
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
 
@@ -26,14 +32,30 @@
                 Contact
                 <img class="w-3 h-3" src="./images/arrow-icon.png">
             </a>
+
+            <button onclick="openMenu()" class="block md:hidden ml-3"><img class="w-6" src="./images/menu-black.png" alt=""></button>
               
 
         </div>
+        <!-- mobile menu section -->
+            <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-65 z-50 h-screen bg-blue-100 transition duration-500 gap-4">
+                <div onclick="closeMenu()" class="absolute top-6 right-6">
+                    <img class="w-5" src="./images/close-black.png" alt="">
+                </div>
+                <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                <li><a onclick="closeMenu()" href="#about">About me</a></li>
+                <li><a onclick="closeMenu()" href="#services">Services</a></li>
+                <li><a onclick="closeMenu()" href="#projects">Projects</a></li>
+                <li><a onclick="closeMenu()" href="#contact">Contact me</a></li>
+            </ul>
+         
+
         
     </nav>
+        <!-- Navigation bar close here -->
 
 
-
+<script src="./script.js"></script>
 </body>
 
 </html>
