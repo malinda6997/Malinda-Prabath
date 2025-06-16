@@ -29,6 +29,28 @@
             -webkit-text-fill-color: transparent;
             animation: gradient-text 4s ease infinite;
         }
+
+            @keyframes gradient-bg {
+              0% {
+                background-position: 0% 50%;
+              }
+          
+              50% {
+                background-position: 100% 50%;
+              }
+          
+              100% {
+                background-position: 0% 50%;
+              }
+            }
+          
+            .animated-gradient-bg {
+              background: linear-gradient(90deg, #f98dde, #86bafa, #9d48f7);
+              background-size: 200% 200%;
+              animation: gradient-bg 4s ease infinite;
+            }
+        
+          
     </style>
 </head>
 
@@ -82,9 +104,23 @@
             <h1 class="text-3xl sm:text-6xl lg:text-[66px] animated-gradient mb-3">
                 Freelancer UI UX Designer & Undergraduate Student
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p class="max-w-2xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Voluptatum fugit beatae, dolorum aliquid veritatis cumque deserunt. 
                 Adipisci pariatur ratione sit iusto.</p>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+                <a class="px-10 py-3 border rounded-full animated-gradient-bg text-wrap flex items-center gap-2 text-white "
+                    href="#contact">
+                    Contact me
+                    <img class="w-4" src="./images/right-arrow-white.png" alt="">
+                </a>
+
+                <a class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white" href="./images/figma.png" download>
+                    My resume
+                    <img class="w-4" src="./images/download-icon.png" alt="">
+                </a>
+
+            </div>
 
          </div>
         <!-- header section close here -->
