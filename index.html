@@ -134,86 +134,75 @@
         <!-- header section close here -->
 
         <!-- About section start here -->
-         <div id="about" class="w-full px-[12%] py-10 scroll-mt-12">
+
+        <div id="about" class="w-full px-6 sm:px-10 md:px-[12%] py-10 scroll-mt-12">
             <h4 class="text-center mb-2 text-lg">Introduction</h4>
-            <h2 class="text-center text-5xl">About me</h2>
+            <h2 class="text-center text-4xl sm:text-5xl">About me</h2>
 
-            <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-                <div class="max-w-max mx-auto relative">
-                    <img class="w-64 sm:w-80 rounded-3xl max-w-none" src="./images/user-image.png" alt="">
-                    <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full transform translate-x-1/4 translate-y-1/3
-                        shadow-[0_4px_55px_rgba(149,0,162,0.15)]">
-
+            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 my-16">
+                <!-- Image and circular text -->
+                <div class="relative w-64 sm:w-80 mx-auto">
+                    <img class="w-full rounded-3xl" src="./images/user-image.png" alt="User">
+                    <div
+                        class="bg-white w-28 sm:w-36 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                        <img class="w-full" src="./images/circular-text.png" alt="">
+                        <img class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            src="./images/dev-icon.png" alt="">
                     </div>
                 </div>
-                <div class="flex-1">
-                    <p class="mb-10 max-w-2xl">
+
+                <!-- Content -->
+                <div class="flex-1 w-full">
+                    <p class="mb-8 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
                         I'm a passionate UI/UX designer with a knack for creating user-friendly interfaces.
                         Currently, I'm pursuing my degree while freelancing for various clients.
                     </p>
-                    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-                        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-purple-50
-                         hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+
+                    <!-- Info Cards -->
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0">
+                        <li
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/code-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
-                            <p class="text-gray-600 text-sm">Python , Java , JavaScript , Html , css , Tailwindcss</p>
-
+                            <p class="text-gray-600 text-sm">Python, Java, JavaScript, HTML, CSS, TailwindCSS</p>
                         </li>
-
-                        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-purple-50
-                                                 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <li
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/edu-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Education</h3>
                             <p class="text-gray-600 text-sm">Bachelor's in Computer Science</p>
-
                         </li>
-
-                        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-purple-50
-                                                 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <li
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/project-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
                             <p class="text-gray-600 text-sm">Personal Portfolio Website, E-commerce Platform</p>
-
-                        </li>
-                    </ul>
-                    <h4 class="my-6 text-gray-600">Tools I use</h4>
-                    <ul class="flex items-center gap-3 sm:gap-5">
-                        <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
-                        </li>
-                        <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                     </ul>
 
+                    <!-- Tools I use -->
+                    <h4 class="my-6 text-gray-600 text-center lg:text-left">Tools I use</h4>
+                    <ul class="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-5">
+                        <li
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
+                        </li>
+                        <!-- Repeat icons as needed -->
+                        <li
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
+                        </li>
+                        <li
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
+                        </li>
+                        <!-- Add more icons if needed -->
+                    </ul>
                 </div>
             </div>
-         </div>
+        </div>
+
+  
 
         <!-- About section close here -->
 
