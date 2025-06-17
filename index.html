@@ -62,13 +62,16 @@
 
     <!-- Navigation bar starts here -->
     <nav
-        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-white/10 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center 
+        justify-between z-50 bg-white/10 backdrop-blur-md md:bg-transparent 
+        md:backdrop-blur-none">
 
     
         <img class="w-28 cursor-pointer mr-14" src="./images/logo-d.png" alt="Logo" />
     
         <ul
-            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white/40 backdrop-blur-lg shadow-sm ring-1 ring-white/10">
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
+            bg-white/40 backdrop-blur-lg shadow-sm ring-1 ring-white/10">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#services">Services</a></li>
@@ -77,7 +80,8 @@
     
         <div class="flex items-center gap-4">
             <button><img class="w-6" src="./images/moon_icon.png" alt="Theme" /></button>
-            <a class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+            <a class="hidden lg:flex items-center gap-3 px-10 py-2.5  rounded-full ml-4 
+            bg-white/40 backdrop-blur-lg shadow-sm ring-1 ring-white/10"
                 href="#Contact">
                 Contact
                 <img class="w-3 h-3" src="./images/arrow-icon.png" alt="Arrow" />
@@ -90,7 +94,8 @@
     
         <!-- mobile menu section -->
         <ul id="sideMenu"
-            class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-65 z-50 h-screen bg-blue-100 transition duration-500 gap-4">
+            class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0
+             w-65 z-50 h-screen bg-blue-100 transition duration-500 gap-4">
             <div onclick="closeMenu()" class="absolute top-6 right-6">
                 <img class="w-5" src="./images/close-black.png" alt="Close" />
             </div>
@@ -106,9 +111,12 @@
         <!-- Navigation bar close here -->
 
         <!-- header section start here -->
-         <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+         <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen
+          flex flex-col items-center justify-center gap-4">
             <img class="rounded-full w-32" src="./images/profile-img.png" >
-            <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">Hi! I'm Malinda Prabath <img class="w-6" src="./images/hand-icon.png" alt=""></h3>
+            <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+                Hi! I'm Malinda Prabath 
+                <img class="w-6" src="./images/hand-icon.png" alt=""></h3>
             <h1 class="text-3xl sm:text-6xl lg:text-[66px] animated-gradient mb-3">
                 Freelancer UI UX Designer & Undergraduate Student
             </h1>
@@ -118,16 +126,18 @@
 
                 <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
                     <!-- Contact Me Button -->
-                    <a class="px-10 py-3 border rounded-full animated-gradient-bg text-white flex items-center justify-center gap-2"
-                        href="#contact">
+                    <a class="px-10 py-3 border rounded-full animated-gradient-bg
+                     text-white flex items-center justify-center gap-2"
+                        href="https://www.linkedin.com/in/malinda-prabath-b401271a0/">
                         <span class="flex items-center gap-2 leading-none">
-                            <span class="text-sm sm:text-base">Contact me</span>
+                            <span class="text-sm sm:text-base">My Linkedin</span>
                             <img class="w-4 h-4 inline-block" src="./images/right-arrow-white.png" alt="">
                         </span>
                     </a>
                 
                     <!-- My Resume Button -->
-                    <a class="px-10 py-3 border rounded-full border-gray-500 bg-white flex items-center justify-center gap-2"
+                    <a class="px-10 py-3 border rounded-full border-gray-500
+                     bg-white flex items-center justify-center gap-2"
                         href="./images/figma.png" download>
                         <span class="flex items-center gap-2 leading-none">
                             <span class="text-sm sm:text-base text-black">My resume</span>
@@ -149,7 +159,9 @@
                 <div class="relative w-64 sm:w-80 mx-auto">
                     <img class="w-full rounded-3xl" src="./images/user-image.png" alt="User">
                     <div
-                        class="bg-white w-28 sm:w-36 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                        class="bg-white w-28 sm:w-36 aspect-square absolute right-0 bottom-0 
+                        rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)]
+                         flex items-center justify-center">
                         <img class="w-full" src="./images/circular-text.png" alt="">
                         <img class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                             src="./images/dev-icon.png" alt="">
@@ -164,21 +176,25 @@
                     </p>
 
                     <!-- Info Cards -->
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0">
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+                    gap-6 max-w-2xl mx-auto lg:mx-0">
                         <li
-                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/code-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
                             <p class="text-gray-600 text-sm">Python, Java, JavaScript, HTML, CSS, TailwindCSS</p>
                         </li>
                         <li
-                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/edu-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Education</h3>
                             <p class="text-gray-600 text-sm">Bachelor's in Computer Science</p>
                         </li>
                         <li
-                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                            class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
                             <img class="w-7 mt-3" src="./images/project-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
                             <p class="text-gray-600 text-sm">Personal Portfolio Website, E-commerce Platform</p>
@@ -189,36 +205,44 @@
                     <h4 class="my-6 text-gray-600 text-center lg:text-left">Tools I use</h4>
                     <ul class="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-5">
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <!-- Repeat icons as needed -->
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                         <li
-                            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
+                            class="flex items-center justify-center w-12 sm:w-14 aspect-square
+                             border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
                             <img class="w-5 sm:w-7" src="./images/figma.png" alt="">
                         </li>
                     </ul>
@@ -232,42 +256,135 @@
         <div id="services" class="w-full px-[6%] sm:px-[10%] scroll-mt-20">
             <h4 class="text-center mb-2 text-lg">What I Offer</h4>
             <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">My Services</h2>
-            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">I offer a range of services to help you achieve your goals.</p>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12"> 
+                I offer a range of services to help you achieve your goals.</p>
         
             <!-- Responsive Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
-                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
-                    <p class="text-sm text-gray-600 leading-5">I create responsive and visually appealing websites.</p>
-                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more <img class="w-4" src="./images/right-arrow.png" alt=""></a>
+                    <p class="text-sm text-gray-600 leading-5">
+                        I create responsive and visually appealing websites.</p>
+                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more
+                         <img class="w-4" src="./images/right-arrow.png" alt=""></a>
                 </div>
                 
                 <!-- Repeat for other service cards -->
-                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                    <img class="w-10" src="./images/web-icon.png" alt="">
+                    <h3 class="text-lg my-4 text-gray-700">Web design</h3>
+                    <p class="text-sm text-gray-600 leading-5">
+                        I create responsive and visually appealing websites.</p>
+                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more 
+                        <img class="w-4" src="./images/right-arrow.png" alt=""></a>
+                </div>
+        
+                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
                     <p class="text-sm text-gray-600 leading-5">I create responsive and visually appealing websites.</p>
                     <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more <img class="w-4" src="./images/right-arrow.png" alt=""></a>
                 </div>
         
-                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] 
+                hover:bg-purple-50 hover:-translate-y-1 duration-500">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
-                    <p class="text-sm text-gray-600 leading-5">I create responsive and visually appealing websites.</p>
-                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more <img class="w-4" src="./images/right-arrow.png" alt=""></a>
-                </div>
-        
-                <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] hover:bg-purple-50 hover:-translate-y-1 duration-500">
-                    <img class="w-10" src="./images/web-icon.png" alt="">
-                    <h3 class="text-lg my-4 text-gray-700">Web design</h3>
-                    <p class="text-sm text-gray-600 leading-5">I create responsive and visually appealing websites.</p>
-                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more <img class="w-4" src="./images/right-arrow.png" alt=""></a>
+                    <p class="text-sm text-gray-600 leading-5">
+                        I create responsive and visually appealing websites.</p>
+                    <a class="flex items-center gap-2 text-sm mt-5" href="">Learn more 
+                        <img class="w-4" src="./images/right-arrow.png" alt=""></a>
                 </div>
             </div>
         </div>
         
-        <!-- Services section start here -->
+        <!-- Services section close here -->
+
+        <!-- project section start here -->
+        <div id="Projects" class="w-full px-[6%] sm:px-[10%] scroll-mt-20">
+            <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">My latest Projects</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+                Here are some of my recent works that showcase my skills and expertise.
+            </p>
+        
+            <!-- ONE grid only for all 4 cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
+        
+                <!-- Card 1 -->
+                <div
+                    class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div
+                        class="bg-white w-[90%] rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 shadow-md">
+                        <div>
+                            <h2 class="font-semibold">UI UX Project</h2>
+                            <p class="text-sm text-gray-700">Web UI Design</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-purple-300 transition">
+                            <img class="w-5" src="./images/send-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div
+                    class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div
+                        class="bg-white w-[90%] rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 shadow-md">
+                        <div>
+                            <h2 class="font-semibold">UI UX Project</h2>
+                            <p class="text-sm text-gray-700">Web UI Design</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-purple-300 transition">
+                            <img class="w-5" src="./images/send-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div
+                    class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div
+                        class="bg-white w-[90%] rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 shadow-md">
+                        <div>
+                            <h2 class="font-semibold">UI UX Project</h2>
+                            <p class="text-sm text-gray-700">Web UI Design</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-purple-300 transition">
+                            <img class="w-5" src="./images/send-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 4 -->
+                <div
+                    class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div
+                        class="bg-white w-[90%] rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 shadow-md">
+                        <div>
+                            <h2 class="font-semibold">UI UX Project</h2>
+                            <p class="text-sm text-gray-700">Web UI Design</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-purple-300 transition">
+                            <img class="w-5" src="./images/send-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+          
+        
+         
+        <!-- project section close here -->
     
 
 
