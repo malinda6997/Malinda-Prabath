@@ -414,39 +414,42 @@
 
 
         <!-- Contact section start here -->
-        <div id="contact"
-            class="w-full px-[12%] py-10 scroll-mt-20 
+        <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 
             bg-[url('./images/footer-bg-color.png')] 
             bg-no-repeat bg-[length:90%_auto] bg-center">
+        
             <h4 class="text-center mb-2 text-lg">Get in Touch</h4>
             <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">Contact Me</h2>
             <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-                I'm always open to discussing new projects, creative ideas, 
+                I'm always open to discussing new projects, creative ideas,
                 or opportunities to be part of your vision.
             </p>
-
+        
             <form class="max-w-2xl mx-auto" action="">
-                <div class="grid grid-cols-2  gap-6 mt-10 mb-6">
+                <!-- Name & Email fields -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-6">
                     <input class="flex-1 p-3 outline-none 
-                    border-[0.5px] border-gray-400 rounded-md bg-white text-sm sm:text-base 
-                    " type="text" placeholder="Enter your name">
-
+                    border-[0.5px] border-gray-400 rounded-md bg-white 
+                    text-sm sm:text-base" type="text" placeholder="Enter your name">
+        
                     <input class="flex-1 p-3 outline-none 
-                    border-[0.5px] border-gray-400 rounded-md bg-white  text-sm sm:text-base
-                    " type="text" placeholder="Enter your Email">
+                    border-[0.5px] border-gray-400 rounded-md bg-white 
+                    text-sm sm:text-base" type="text" placeholder="Enter your Email">
                 </div>
+        
+                <!-- Message -->
                 <textarea class="w-full p-4 outline-none border-[0.5px] 
-                border-gray-400 rounded-md bg-white mb-6" rows="6" 
-                 placeholder="Enter your Message" id=""></textarea>
-
-                 <button class="px-6 py-3 border rounded-full animated-gradient-bg
-                     text-white flex items-center justify-between mx-auto gap-2">Submit now 
-                    </button>
-
+                border-gray-400 rounded-md bg-white mb-6 text-sm sm:text-base" rows="6"
+                    placeholder="Enter your Message"></textarea>
+        
+                <!-- Submit Button -->
+                <button class="px-6 py-3 border rounded-full animated-gradient-bg
+                text-white flex items-center justify-center gap-2 mx-auto">
+                    Submit now
+                </button>
             </form>
-
-
         </div>
+
 
         <!-- Contact section start here -->
     
