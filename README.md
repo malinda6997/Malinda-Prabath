@@ -34,12 +34,17 @@ This project is automatically deployed to AWS S3 using a GitHub Actions workflow
 ## 📁 Project Structure
 
 Malinda-Prabath/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 └── .github/
     └── workflows/
         └── deploy.yml
+
 
 
 ### 🔧 `.github/workflows/deploy.yml`
