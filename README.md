@@ -30,6 +30,18 @@ This project is automatically deployed to AWS S3 using a GitHub Actions workflow
 - Tool: [`jakejarvis/s3-sync-action`](https://github.com/jakejarvis/s3-sync-action)
 - Credentials: Stored securely using GitHub Secrets
 
+
+## 📁 Project Structure
+
+Malinda-Prabath/
+├── index.html
+├── style.css
+├── script.js
+└── .github/
+    └── workflows/
+        └── deploy.yml
+
+
 ### 🔧 `.github/workflows/deploy.yml`
 
 ```yaml
@@ -58,12 +70,3 @@ jobs:
           AWS_REGION: 'us-east-1'
 
 
-## 📁 Project Structure
-
-Malinda-Prabath/
-├── index.html
-├── style.css
-├── script.js
-└── .github/
-    └── workflows/
-        └── deploy.yml
