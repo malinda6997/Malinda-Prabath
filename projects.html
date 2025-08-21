@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>My Projects - Malinda Prabath</title>
+
+    <style>
+        @keyframes gradient-text {
+            0% {
+                background-position: 0% 50%;
+            }
+    
+            50% {
+                background-position: 100% 50%;
+            }
+    
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        .animated-gradient {
+            background: linear-gradient(90deg, #f98dde, #86bafa, #9d48f7);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-text 4s ease infinite;
+        }
+
+        @keyframes gradient-bg {
+          0% {
+            background-position: 0% 50%;
+          }
+      
+          50% {
+            background-position: 100% 50%;
+          }
+      
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      
+        .animated-gradient-bg {
+          background: linear-gradient(90deg, #f98dde, #86bafa, #9d48f7);
+          background-size: 200% 200%;
+          animation: gradient-bg 4s ease infinite;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+        <img class="w-full " src="./images/header-bg-color.png" alt="">
+    </div>
+
+    <!-- Navigation bar starts here -->
+    <nav
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center 
+        justify-between z-50 bg-white/10 backdrop-blur-md md:bg-transparent 
+        md:backdrop-blur-none">
+
+        <img class="w-28 cursor-pointer mr-14" src="./images/logo-d.png" alt="Logo" />
+    
+        <ul
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
+            bg-white/40 backdrop-blur-lg shadow-sm ring-1 ring-white/10">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About me</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="projects.html" class="text-purple-600 font-semibold">Projects</a></li>
+        </ul>
+    
+        <div class="flex items-center gap-4">
+            <button><img class="w-6" src="./images/moon_icon.png" alt="Theme" /></button>
+            <a class="hidden lg:flex items-center gap-3 px-10 py-2.5  rounded-full ml-4 
+            bg-white/40 backdrop-blur-lg shadow-sm ring-1 ring-white/10"
+                href="index.html#contact">
+                Contact
+                <img class="w-3 h-3" src="./images/arrow-icon.png" alt="Arrow" />
+            </a>
+    
+            <button onclick="openMenu()" class="block md:hidden ml-3">
+                <img class="w-6" src="./images/menu-black.png" alt="Menu" />
+            </button>
+        </div>
+    
+        <!-- mobile menu section -->
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0
+             w-65 z-50 h-screen bg-blue-100 transition duration-500 gap-4">
+            <div onclick="closeMenu()" class="absolute top-6 right-6">
+                <img class="w-5" src="./images/close-black.png" alt="Close" />
+            </div>
+            <li><a onclick="closeMenu()" href="index.html#home">Home</a></li>
+            <li><a onclick="closeMenu()" href="index.html#about">About me</a></li>
+            <li><a onclick="closeMenu()" href="index.html#services">Services</a></li>
+            <li><a onclick="closeMenu()" href="projects.html">Projects</a></li>
+            <li><a onclick="closeMenu()" href="index.html#contact">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header section for projects page -->
+    <div class="w-full px-[6%] sm:px-[10%] pt-32 pb-16">
+        <h1 class="text-center text-4xl sm:text-5xl md:text-6xl animated-gradient mb-6">
+            My Projects
+        </h1>
+        <p class="text-center max-w-3xl mx-auto text-lg text-gray-600">
+            Explore my complete portfolio of projects that showcase my skills in UI/UX design, 
+            web development, and creative problem-solving. Each project represents a unique 
+            challenge and solution.
+        </p>
+    </div>
+
+    <!-- Projects Grid Section -->
+    <div class="w-full px-[6%] sm:px-[10%] pb-20">
+        
+        <!-- Projects Grid - 12 Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Project Card 1 -->
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">E-Commerce Platform</h2>
+                        <p class="text-sm text-gray-700">Web Development</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Mobile App Design</h2>
+                        <p class="text-sm text-gray-700">UI/UX Design</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Dashboard Analytics</h2>
+                        <p class="text-sm text-gray-700">Data Visualization</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Portfolio Website</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Restaurant App</h2>
+                        <p class="text-sm text-gray-700">Mobile Design</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Banking Interface</h2>
+                        <p class="text-sm text-gray-700">Financial App</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 7 -->
+            <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Learning Platform</h2>
+                        <p class="text-sm text-gray-700">Education Tech</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 8 -->
+            <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Travel Booking</h2>
+                        <p class="text-sm text-gray-700">Travel App</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 9 -->
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Social Media App</h2>
+                        <p class="text-sm text-gray-700">Social Platform</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 10 -->
+            <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Fitness Tracker</h2>
+                        <p class="text-sm text-gray-700">Health App</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 11 -->
+            <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Music Streaming</h2>
+                        <p class="text-sm text-gray-700">Entertainment</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 12 -->
+            <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
+                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-[90%] rounded-md absolute bottom-5 
+                    left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
+                    justify-between duration-500 group-hover:bottom-7 shadow-md">
+                    <div>
+                        <h2 class="font-semibold">Weather App</h2>
+                        <p class="text-sm text-gray-700">Utility App</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center shadow-[2px_2px_0_#000] 
+                        group-hover:bg-purple-300 transition">
+                        <img class="w-5" src="./images/send-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="text-center mt-16">
+            <a class="inline-flex items-center justify-center gap-2 text-white 
+            border rounded-full py-3 px-10 animated-gradient-bg
+            transition-all duration-300 hover:shadow-lg hover:-translate-y-1" 
+            href="index.html"> 
+                Back to Home
+                <img class="w-4" src="./images/right-arrow-white.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- footer section start here -->
+    <div class="flex flex-col sm:flex-row items-center justify-between 
+        border-t border-gray-400 mx-[6%] py-6 text-center gap-4">
+    
+        <p class="text-gray-600">© 2025 My Portfolio. All rights reserved.</p>
+    
+        <ul class="flex items-center justify-center gap-6 text-sm">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Github</a></li>
+        </ul>
+    </div>
+    <!-- footer section close here -->
+
+<script src="./script.js"></script>
+</body>
+
+</html>
