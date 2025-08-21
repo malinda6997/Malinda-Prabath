@@ -1,0 +1,62 @@
+<!-- Alternative Contact Form using Formspree (Simpler Setup) -->
+<!-- This form will send client messages directly to malindaprabath876@gmail.com -->
+<!-- Replace your existing form section with this if you prefer Formspree -->
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-2xl mx-auto">
+    <!-- Name & Email fields -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-6">
+        <input name="client_name" class="flex-1 p-3 outline-none 
+        border-[0.5px] border-gray-400 rounded-md bg-white 
+        text-sm sm:text-base" type="text" placeholder="Enter your name" required>
+
+        <input name="client_email" class="flex-1 p-3 outline-none 
+        border-[0.5px] border-gray-400 rounded-md bg-white 
+        text-sm sm:text-base" type="email" placeholder="Enter your Email" required>
+    </div>
+
+    <!-- Message -->
+    <textarea name="client_message" class="w-full p-4 outline-none border-[0.5px] 
+    border-gray-400 rounded-md bg-white mb-6 text-sm sm:text-base" rows="6"
+        placeholder="Enter your Message" required></textarea>
+
+    <!-- Hidden field to specify where emails should be sent (your email) -->
+    <input type="hidden" name="_to" value="malindaprabath876@gmail.com">
+    
+    <!-- Hidden field for custom subject line -->
+    <input type="hidden" name="_subject" value="New Client Inquiry from Portfolio">
+    
+    <!-- Hidden field for redirect after submission -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    
+    <!-- Hidden field to prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Submit Button -->
+    <button type="submit" class="px-6 py-3 border rounded-full animated-gradient-bg
+    text-white flex items-center justify-center gap-2 mx-auto">
+        Submit now
+    </button>
+</form>
+
+<!-- 
+SETUP INSTRUCTIONS FOR RECEIVING CLIENT EMAILS:
+
+1. Go to https://formspree.io/
+2. Sign up for free using malindaprabath876@gmail.com
+3. Create a new form
+4. Get your form endpoint (looks like: https://formspree.io/f/abc123xyz)
+5. Replace "YOUR_FORM_ID" with your actual form ID
+6. Replace the entire form section in your index.html with this code
+
+HOW IT WORKS:
+- Clients fill out the form on your portfolio
+- Formspree sends their message to malindaprabath876@gmail.com
+- You receive an email with the client's name, email, and message
+- You can reply directly to the client from your email
+
+WHAT YOU'LL RECEIVE:
+Subject: New Client Inquiry from Portfolio
+From: noreply@formspree.io
+Content: Client's name, email, and message
+Reply-To: Client's actual email address
+-->

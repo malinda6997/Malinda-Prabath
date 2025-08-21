@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Malinda-Prabath</title>
 
     <style>
@@ -48,6 +49,67 @@
               background: linear-gradient(90deg, #f98dde, #86bafa, #9d48f7);
               background-size: 200% 200%;
               animation: gradient-bg 4s ease infinite;
+            }
+
+            /* Scroll Animations */
+            .scroll-animation {
+              opacity: 0;
+              transform: translateY(50px);
+              transition: all 0.8s ease-out;
+            }
+
+            .scroll-animation.animate {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            .scroll-animation-left {
+              opacity: 0;
+              transform: translateX(-50px);
+              transition: all 0.8s ease-out;
+            }
+
+            .scroll-animation-left.animate {
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+            .scroll-animation-right {
+              opacity: 0;
+              transform: translateX(50px);
+              transition: all 0.8s ease-out;
+            }
+
+            .scroll-animation-right.animate {
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+            .scroll-animation-scale {
+              opacity: 0;
+              transform: scale(0.8);
+              transition: all 0.8s ease-out;
+            }
+
+            .scroll-animation-scale.animate {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            .stagger-animation {
+              transition-delay: 0.1s;
+            }
+
+            .stagger-animation:nth-child(2) {
+              transition-delay: 0.2s;
+            }
+
+            .stagger-animation:nth-child(3) {
+              transition-delay: 0.3s;
+            }
+
+            .stagger-animation:nth-child(4) {
+              transition-delay: 0.4s;
             }
         
           
@@ -151,13 +213,13 @@
         <!-- About section start here -->
 
         <div id="about" class="w-full px-6 sm:px-10 md:px-[12%] py-10 scroll-mt-12">
-            <h4 class="text-center mb-2 text-lg">Introduction</h4>
-            <h2 class="text-center text-4xl sm:text-5xl">About me</h2>
+            <h4 class="text-center mb-2 text-lg scroll-animation">Introduction</h4>
+            <h2 class="text-center text-4xl sm:text-5xl scroll-animation">About me</h2>
 
             <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 my-16">
                 <!-- Image and circular text -->
-                <div class="relative w-64 sm:w-80 mx-auto">
-                    <img class="w-full rounded-3xl" src="./images/user-image.png" alt="User">
+                <div class="relative w-64 sm:w-80 mx-auto scroll-animation-left">
+                    <img class="w-full rounded-3xl" src="./images/side.jpg" alt="User">
                     <div
                         class="bg-white w-28 sm:w-36 aspect-square absolute right-0 bottom-0 
                         rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)]
@@ -169,7 +231,7 @@
                 </div>
 
                 <!-- Content -->
-                <div class="flex-1 w-full">
+                <div class="flex-1 w-full scroll-animation-right">
                     <p class="mb-8 mt-6 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
                         I'm a passionate UI/UX designer with a knack for creating user-friendly interfaces.
                         Currently, I'm pursuing my degree while freelancing for various clients.
@@ -180,21 +242,21 @@
                     gap-6 max-w-2xl mx-auto lg:mx-0">
                         <li
                             class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
-                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] scroll-animation stagger-animation">
                             <img class="w-7 mt-3" src="./images/code-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
                             <p class="text-gray-600 text-sm">Python, Java, JavaScript, HTML, CSS, TailwindCSS</p>
                         </li>
                         <li
                             class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
-                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] scroll-animation stagger-animation">
                             <img class="w-7 mt-3" src="./images/edu-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Education</h3>
                             <p class="text-gray-600 text-sm">Bachelor's in Computer Science</p>
                         </li>
                         <li
                             class="border border-gray-400 rounded-xl p-6 hover:bg-purple-50
-                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+                             hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] scroll-animation stagger-animation">
                             <img class="w-7 mt-3" src="./images/project-icon.png" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
                             <p class="text-gray-600 text-sm">Personal Portfolio Website, E-commerce Platform</p>
@@ -202,8 +264,8 @@
                     </ul>
 
                     <!-- Tools I use -->
-                    <h4 class="my-6 text-gray-600 text-center lg:text-left">Tools I use</h4>
-                    <ul class="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-5">
+                    <h4 class="my-6 text-gray-600 text-center lg:text-left scroll-animation">Tools I use</h4>
+                    <ul class="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-5 scroll-animation-scale">
                         <li
                             class="flex items-center justify-center w-12 sm:w-14 aspect-square
                              border border-gray-300 rounded-lg hover:-translate-y-1 duration-500">
@@ -254,15 +316,15 @@
 
         <!-- Services section start here -->
         <div id="services" class="w-full px-[6%] sm:px-[10%] scroll-mt-20">
-            <h4 class="text-center mb-2 text-lg">What I Offer</h4>
-            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">My Services</h2>
-            <p class="text-center max-w-2xl mx-auto mt-5 mb-12"> 
+            <h4 class="text-center mb-2 text-lg scroll-animation">What I Offer</h4>
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl scroll-animation">My Services</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12 scroll-animation"> 
                 I offer a range of services to help you achieve your goals.</p>
         
             <!-- Responsive Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
                 <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
-                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500 scroll-animation stagger-animation">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
                     <p class="text-sm text-gray-600 leading-5">
@@ -273,7 +335,7 @@
                 
                 <!-- Repeat for other service cards -->
                 <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
-                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500 scroll-animation stagger-animation">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
                     <p class="text-sm text-gray-600 leading-5">
@@ -283,7 +345,7 @@
                 </div>
         
                 <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
-                 hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                 hover:bg-purple-50 hover:-translate-y-1 duration-500 scroll-animation stagger-animation">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
                     <p class="text-sm text-gray-600 leading-5">I create responsive and visually appealing websites.</p>
@@ -291,7 +353,7 @@
                 </div>
         
                 <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] 
-                hover:bg-purple-50 hover:-translate-y-1 duration-500">
+                hover:bg-purple-50 hover:-translate-y-1 duration-500 scroll-animation stagger-animation">
                     <img class="w-10" src="./images/web-icon.png" alt="">
                     <h3 class="text-lg my-4 text-gray-700">Web design</h3>
                     <p class="text-sm text-gray-600 leading-5">
@@ -306,9 +368,9 @@
 
         <!-- project section start here -->
         <div id="Projects" class="w-full px-[6%] sm:px-[10%] scroll-mt-20">
-            <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
-            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">My latest Projects</h2>
-            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            <h4 class="text-center mb-2 text-lg scroll-animation">My Portfolio</h4>
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl scroll-animation">My latest Projects</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12 scroll-animation">
                 Here are some of my recent works that showcase my skills and expertise.
             </p>
         
@@ -318,7 +380,7 @@
                 <!-- Card 1 -->
                 <div
                     class="aspect-square bg-[url('./images/work-1.png')] 
-                    bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                     <div
                         class="bg-white w-[90%] rounded-md absolute bottom-5 
                         left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
@@ -339,7 +401,7 @@
                 <!-- Card 2 -->
                 <div
                     class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat 
-                    bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                     <div
                         class="bg-white w-[90%] rounded-md absolute bottom-5
                          left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
@@ -360,7 +422,7 @@
                 <!-- Card 3 -->
                 <div
                     class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
-                     bg-cover bg-center rounded-lg relative cursor-pointer group">
+                     bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                     <div
                         class="bg-white w-[90%] rounded-md absolute bottom-5 
                         left-1/2 -translate-x-1/2 py-3 px-5 flex items-center
@@ -381,7 +443,7 @@
                 <!-- Card 4 -->
                 <div
                     class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
-                     bg-cover bg-center rounded-lg relative cursor-pointer group">
+                     bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                     <div
                         class="bg-white w-[90%] rounded-md absolute bottom-5 
                         left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
@@ -401,8 +463,16 @@
         
             </div>
 
-            
-             
+            <!-- Explore More Button -->
+            <div class="text-center mt-12 scroll-animation">
+                <a class="inline-flex items-center justify-center gap-2 text-white 
+                border rounded-full py-3 px-10 animated-gradient-bg
+                transition-all duration-300 hover:shadow-lg hover:-translate-y-1" 
+                href="projects.html"> 
+                    Explore more
+                    <img class="w-4" src="./images/right-arrow-white.png" alt="">
+                </a>
+            </div>
 
             <!-- <a class="w-max flex items-center justify-center gap-2 text-gray-700 
             border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20" 
@@ -418,34 +488,40 @@
             bg-[url('./images/footer-bg-color.png')] 
             bg-no-repeat bg-[length:90%_auto] bg-center">
         
-            <h4 class="text-center mb-2 text-lg">Get in Touch</h4>
-            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">Contact Me</h2>
-            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            <h4 class="text-center mb-2 text-lg scroll-animation">Get in Touch</h4>
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl scroll-animation">Contact Me</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12 scroll-animation">
                 I'm always open to discussing new projects, creative ideas,
                 or opportunities to be part of your vision.
             </p>
         
-            <form class="max-w-2xl mx-auto" action="">
+            <form id="contact-form" class="max-w-2xl mx-auto scroll-animation-scale">
                 <!-- Name & Email fields -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-6">
-                    <input class="flex-1 p-3 outline-none 
+                    <input id="user-name" name="user_name" class="flex-1 p-3 outline-none 
                     border-[0.5px] border-gray-400 rounded-md bg-white 
-                    text-sm sm:text-base" type="text" placeholder="Enter your name">
+                    text-sm sm:text-base" type="text" placeholder="Enter your name" required>
         
-                    <input class="flex-1 p-3 outline-none 
+                    <input id="user-email" name="user_email" class="flex-1 p-3 outline-none 
                     border-[0.5px] border-gray-400 rounded-md bg-white 
-                    text-sm sm:text-base" type="text" placeholder="Enter your Email">
+                    text-sm sm:text-base" type="email" placeholder="Enter your Email" required>
                 </div>
         
                 <!-- Message -->
-                <textarea class="w-full p-4 outline-none border-[0.5px] 
+                <textarea id="user-message" name="message" class="w-full p-4 outline-none border-[0.5px] 
                 border-gray-400 rounded-md bg-white mb-6 text-sm sm:text-base" rows="6"
-                    placeholder="Enter your Message"></textarea>
+                    placeholder="Enter your Message" required></textarea>
         
                 <!-- Submit Button -->
-                <button class="px-6 py-3 border rounded-full animated-gradient-bg
+                <button type="submit" id="submit-btn" class="px-6 py-3 border rounded-full animated-gradient-bg
                 text-white flex items-center justify-center gap-2 mx-auto">
-                    Submit now
+                    <span id="btn-text">Submit now</span>
+                    <div id="loading-spinner" class="hidden">
+                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </div>
                 </button>
             </form>
         </div>
