@@ -50,6 +50,77 @@
           background-size: 200% 200%;
           animation: gradient-bg 4s ease infinite;
         }
+
+        /* Scroll Animations */
+        .scroll-animation {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 0.8s ease-out;
+        }
+
+        .scroll-animation.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .scroll-animation-scale {
+          opacity: 0;
+          transform: scale(0.8);
+          transition: all 0.8s ease-out;
+        }
+
+        .scroll-animation-scale.animate {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .stagger-animation {
+          transition-delay: 0.1s;
+        }
+
+        .stagger-animation:nth-child(2) {
+          transition-delay: 0.2s;
+        }
+
+        .stagger-animation:nth-child(3) {
+          transition-delay: 0.3s;
+        }
+
+        .stagger-animation:nth-child(4) {
+          transition-delay: 0.4s;
+        }
+
+        .stagger-animation:nth-child(5) {
+          transition-delay: 0.5s;
+        }
+
+        .stagger-animation:nth-child(6) {
+          transition-delay: 0.6s;
+        }
+
+        .stagger-animation:nth-child(7) {
+          transition-delay: 0.7s;
+        }
+
+        .stagger-animation:nth-child(8) {
+          transition-delay: 0.8s;
+        }
+
+        .stagger-animation:nth-child(9) {
+          transition-delay: 0.9s;
+        }
+
+        .stagger-animation:nth-child(10) {
+          transition-delay: 1.0s;
+        }
+
+        .stagger-animation:nth-child(11) {
+          transition-delay: 1.1s;
+        }
+
+        .stagger-animation:nth-child(12) {
+          transition-delay: 1.2s;
+        }
     </style>
 </head>
 
@@ -107,10 +178,10 @@
 
     <!-- Header section for projects page -->
     <div class="w-full px-[6%] sm:px-[10%] pt-32 pb-16">
-        <h1 class="text-center text-4xl sm:text-5xl md:text-6xl animated-gradient mb-6">
+        <h1 class="text-center text-4xl sm:text-5xl md:text-6xl animated-gradient mb-6 scroll-animation">
             My Projects
         </h1>
-        <p class="text-center max-w-3xl mx-auto text-lg text-gray-600">
+        <p class="text-center max-w-3xl mx-auto text-lg text-gray-600 scroll-animation">
             Explore my complete portfolio of projects that showcase my skills in UI/UX design, 
             web development, and creative problem-solving. Each project represents a unique 
             challenge and solution.
@@ -125,7 +196,7 @@
             
             <!-- Project Card 1 -->
             <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -143,7 +214,7 @@
 
             <!-- Project Card 2 -->
             <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -161,7 +232,7 @@
 
             <!-- Project Card 3 -->
             <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -179,7 +250,7 @@
 
             <!-- Project Card 4 -->
             <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -197,7 +268,7 @@
 
             <!-- Project Card 5 -->
             <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -215,7 +286,7 @@
 
             <!-- Project Card 6 -->
             <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -233,7 +304,7 @@
 
             <!-- Project Card 7 -->
             <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -251,7 +322,7 @@
 
             <!-- Project Card 8 -->
             <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -269,7 +340,7 @@
 
             <!-- Project Card 9 -->
             <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -287,7 +358,7 @@
 
             <!-- Project Card 10 -->
             <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -305,7 +376,7 @@
 
             <!-- Project Card 11 -->
             <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -323,7 +394,7 @@
 
             <!-- Project Card 12 -->
             <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
-                 bg-cover bg-center rounded-lg relative cursor-pointer group">
+                 bg-cover bg-center rounded-lg relative cursor-pointer group scroll-animation stagger-animation">
                 <div class="bg-white w-[90%] rounded-md absolute bottom-5 
                     left-1/2 -translate-x-1/2 py-3 px-5 flex items-center 
                     justify-between duration-500 group-hover:bottom-7 shadow-md">
@@ -342,7 +413,7 @@
         </div>
 
         <!-- Back to Home Button -->
-        <div class="text-center mt-16">
+        <div class="text-center mt-16 scroll-animation">
             <a class="inline-flex items-center justify-center gap-2 text-white 
             border rounded-full py-3 px-10 animated-gradient-bg
             transition-all duration-300 hover:shadow-lg hover:-translate-y-1" 
@@ -369,6 +440,47 @@
     <!-- footer section close here -->
 
 <script src="./script.js"></script>
+<script>
+// Scroll Animations for Projects Page
+document.addEventListener('DOMContentLoaded', function() {
+    // Create intersection observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -10% 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with scroll animation classes
+    const animatedElements = document.querySelectorAll('.scroll-animation, .scroll-animation-left, .scroll-animation-right, .scroll-animation-scale');
+    
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Add smooth scrolling to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
 </body>
 
 </html>

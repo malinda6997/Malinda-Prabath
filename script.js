@@ -133,3 +133,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Scroll Animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Create intersection observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -10% 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with scroll animation classes
+    const animatedElements = document.querySelectorAll('.scroll-animation, .scroll-animation-left, .scroll-animation-right, .scroll-animation-scale');
+    
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Add smooth scrolling to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
