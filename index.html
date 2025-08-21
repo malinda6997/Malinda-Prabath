@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Malinda-Prabath</title>
 
     <style>
@@ -157,7 +158,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 my-16">
                 <!-- Image and circular text -->
                 <div class="relative w-64 sm:w-80 mx-auto">
-                    <img class="w-full rounded-3xl" src="./images/user-image.png" alt="User">
+                    <img class="w-full rounded-3xl" src="./images/side.jpg" alt="User">
                     <div
                         class="bg-white w-28 sm:w-36 aspect-square absolute right-0 bottom-0 
                         rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)]
@@ -425,27 +426,33 @@
                 or opportunities to be part of your vision.
             </p>
         
-            <form class="max-w-2xl mx-auto" action="">
+            <form id="contact-form" class="max-w-2xl mx-auto">
                 <!-- Name & Email fields -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-6">
-                    <input class="flex-1 p-3 outline-none 
+                    <input id="user-name" name="user_name" class="flex-1 p-3 outline-none 
                     border-[0.5px] border-gray-400 rounded-md bg-white 
-                    text-sm sm:text-base" type="text" placeholder="Enter your name">
+                    text-sm sm:text-base" type="text" placeholder="Enter your name" required>
         
-                    <input class="flex-1 p-3 outline-none 
+                    <input id="user-email" name="user_email" class="flex-1 p-3 outline-none 
                     border-[0.5px] border-gray-400 rounded-md bg-white 
-                    text-sm sm:text-base" type="text" placeholder="Enter your Email">
+                    text-sm sm:text-base" type="email" placeholder="Enter your Email" required>
                 </div>
         
                 <!-- Message -->
-                <textarea class="w-full p-4 outline-none border-[0.5px] 
+                <textarea id="user-message" name="message" class="w-full p-4 outline-none border-[0.5px] 
                 border-gray-400 rounded-md bg-white mb-6 text-sm sm:text-base" rows="6"
-                    placeholder="Enter your Message"></textarea>
+                    placeholder="Enter your Message" required></textarea>
         
                 <!-- Submit Button -->
-                <button class="px-6 py-3 border rounded-full animated-gradient-bg
+                <button type="submit" id="submit-btn" class="px-6 py-3 border rounded-full animated-gradient-bg
                 text-white flex items-center justify-center gap-2 mx-auto">
-                    Submit now
+                    <span id="btn-text">Submit now</span>
+                    <div id="loading-spinner" class="hidden">
+                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </div>
                 </button>
             </form>
         </div>
